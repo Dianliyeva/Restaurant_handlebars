@@ -1,9 +1,42 @@
+<div class="dropdown">
+  <button id="dropbtn">View Your Nearest Location</button>
+  <div class="dropdown-content">
+    <a href="/restaurants/1">Brooklyn</a>
+    <a href="/restaurants/2">Miami</a>
+    <a href="/restaurants/3">Baltimore</a>
+    <a href="/restaurants/4">Boston</a>
+    <a href="/restaurants/5">Seattle</a>
+    <a href="/restaurants/6">Chicago</a>
+    <a href="/restaurants/7">California</a>
+    <a href="/restaurants/8">Texas</a>
+  </div>
+</div>
+
+<div class="button">
+  <button id="salebtn">Click here for a 10% off discount</button>
+  <div class="button-content">
+  </div>
+</div>
+
+
+<p id="demo"></p>
+<script>
+document.getElementById("dropbtn").addEventListener("click", displayDate);
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+document.getElementById("salebtn").addEventListener("click", function() {
+  alert("A link has been sent to your account email!");
+}, false);
+
+</script>
 <section>
-    <h2>There are {{restaurants.length}} restaurants</h2>
+    <h2>There are {{restaurants.length}} restaurant locations:</h2>
     {{#each restaurants}} {{!-- for each restaurants in restaurants, create the following html --}}
     <article class = "clearfix item-container block">
-        <h2>{{name}}</h2>
-        <img class="image" src="{{image}}" />
+      <h2>{{name}}</h2>
+       <a href="/menus/{{id}}"><img class="image" src="{{image}}"/> </a>
     </article>
     {{/each}}
 </section>

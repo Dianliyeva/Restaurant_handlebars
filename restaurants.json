@@ -1,6 +1,6 @@
 [
     {
-        "name": "Bayroot",
+        "name": "Brooklyn",
         "image": "https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/England/Brighton/brighton-restaurants-hotel-du-vin-bistro.jpg",
         "menus": [
             {
@@ -44,7 +44,7 @@
         ]
     },
     {
-        "name": "The Berkley",
+        "name": "Miami",
         "image": "https://www.the-berkeley.co.uk/siteassets/restaurants--bars/the-garden-at-the-berkeley/the-garden-at-the-berkeley-teaser.jpg?w=620&h=560&scale=both&mode=crop",
         "menus": [
             {
@@ -92,7 +92,7 @@
         ]
     },
     {
-        "name": "Balthazar",
+        "name": "Baltimore",
         "image": "https://media.timeout.com/images/105034416/1372/772/image.jpg",
         "menus": [
             {
@@ -181,7 +181,7 @@
         ]
     },
     {
-        "name": "Berners Tavern",
+        "name": "Boston",
         "image": "https://media.timeout.com/images/103495239/1372/772/image.jpg",
         "menus": [
             {
@@ -257,7 +257,7 @@
         ]
     },
     {
-        "name": "Blanchette East",
+        "name": "Seattle",
         "image": "https://media.timeout.com/images/103717157/1372/772/image.jpg",
         "menus": [
             {
@@ -308,7 +308,7 @@
         ]
     },
     {
-        "name": "Bob Bob Ricard",
+        "name": "Chicago",
         "image": "https://media.timeout.com/images/103717078/1372/772/image.jpg",
         "menus": [
             {
@@ -377,7 +377,7 @@
         ]
     },
     {
-        "name": "Cafe Monico",
+        "name": "California",
         "image": "https://media.timeout.com/images/103720815/1372/772/image.jpg",
         "menus": [
             {
@@ -434,7 +434,7 @@
         ]
     },
     {
-        "name": "Impact crator",
+        "name": "Texas",
         "image": "https://media.timeout.com/images/103813580/1372/772/image.jpg",
         "menus": [
           {

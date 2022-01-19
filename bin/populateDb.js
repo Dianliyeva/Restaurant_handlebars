@@ -24,4 +24,4 @@ async function populateDb() {
     }
 }
 
-populateDb();
+module.exports = populateDb;

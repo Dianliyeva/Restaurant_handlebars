@@ -3,6 +3,7 @@ const { check, validationResult } = require('express-validator');
 const Handlebars = require('handlebars')
 const expressHandlebars = require('express-handlebars')
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+const populateDb = require('./bin/populateDb')
 
 const Restaurant = require('./models/restaurant');
 const Menu = require('./models/menu');
@@ -48,6 +49,16 @@ app.get('/restaurants/:id', async (req, res) => {
     res.render('restaurant', {restaurant});
 });
 
+app.get('/menus', async (req, res) => {
+    const menus = await Menu.findAll();
+    res.render('menus', {menus});
+});
+
+app.get('/menus/:id', async (req, res) => {
+    const menu = await Menu.findByPk(req.params.id, {include: MenuItem})
+    res.render('menu', {menu});
+});
+
 app.post('/restaurants', restaurantChecks, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -83,5 +94,6 @@ app.patch('/restaurants/:id', async (req, res) => {
 });
 
 app.listen(port, () => {
+    populateDb();
     console.log(`Server listening at http://localhost:${port}`);
 });
