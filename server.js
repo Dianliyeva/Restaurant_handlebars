@@ -8,6 +8,8 @@ const populateDb = require('./bin/populateDb')
 const Restaurant = require('./models/restaurant');
 const Menu = require('./models/menu');
 const MenuItem = require('./models/menuItem');
+const Form = require('./models/form');
+
 
 const initialiseDb = require('./initialiseDb');
 initialiseDb();
@@ -27,7 +29,9 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'));
 
 app.use(express.json());
-
+app.use(express.urlencoded({
+    extended: false
+}))
 
 const restaurantChecks = [
     check('name').not().isEmpty().trim().escape(),
@@ -93,7 +97,30 @@ app.patch('/restaurants/:id', async (req, res) => {
     res.sendStatus(200);
 });
 
+app.get('/form', async (req, res) => {
+    const form = await Form.findAll(req.params.id)
+    res.render('form', {form});
+});
+
+app.delete('/restaurants/:id', async (req,res) => {
+    const deletedRestaurant = await Restaurant.destroy({
+        where: {id: req.params.id}})
+    res.send({deletedRestaurant});
+})
+
+app.get('/restaurants/:id', async (req, res) => {
+    console.log('hello world')
+    const restaurant = await Restaurant.findByPk(req.params.id)
+    // console.log("restaurant", restaurant);
+    if(restaurant){
+        res.render('restaurant', {restaurant})
+    }else{
+        res.send('404 RESTAURANT NOT FOUND');
+    }
+    
+})
+
 app.listen(port, () => {
     populateDb();
-    console.log(`Server listening at http://localhost:${port}`);
+    console.log(`Server is listening at http://localhost:${port}`);
 });

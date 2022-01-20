@@ -1,3 +1,4 @@
+<div id="header">
 <div class="dropdown">
   <button id="dropbtn">View Your Nearest Location</button>
   <div class="dropdown-content">
@@ -17,22 +18,20 @@
   <div class="button-content">
   </div>
 </div>
+</div>
 
-
-<p id="demo"></p>
 <script>
 document.getElementById("dropbtn").addEventListener("click", displayDate);
 function displayDate() {
-  document.getElementById("demo").innerHTML = Date();
+  console.log (Date());
 }
-
 document.getElementById("salebtn").addEventListener("click", function() {
   alert("A link has been sent to your account email!");
 }, false);
 
 </script>
 <section>
-    <h2>There are {{restaurants.length}} restaurant locations:</h2>
+    <h2>There are {{restaurants.length}} restaurants. Click each restaurant to view menu:</h2>
     {{#each restaurants}} {{!-- for each restaurants in restaurants, create the following html --}}
     <article class = "clearfix item-container block">
       <h2>{{name}}</h2>

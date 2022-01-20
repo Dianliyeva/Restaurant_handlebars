@@ -54,8 +54,8 @@ h2 {
     display: block;
   }
   
-  .dropdown:hover .dropbtn {
-    background-color: #9b6b359f;
+  .dropdown:hover #dropbtn {
+    background-color: #7c4c0cb6;
   }
 
   #salebtn {
@@ -67,4 +67,9 @@ h2 {
     cursor: pointer;
     display: block;
     margin-left: auto;
+  }
+
+  #header {
+    display: flex;
+    justify-content: space-between;
   }

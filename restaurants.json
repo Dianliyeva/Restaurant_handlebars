@@ -48,7 +48,7 @@
         "image": "https://www.the-berkeley.co.uk/siteassets/restaurants--bars/the-garden-at-the-berkeley/the-garden-at-the-berkeley-teaser.jpg?w=620&h=560&scale=both&mode=crop",
         "menus": [
             {
-                "title": "Afternoon tea",
+                "title": "Afternoon Tea",
                 "items": [
                     {
                         "name": "Prêt-à-Portea",
@@ -61,7 +61,7 @@
                 ]
             },
             {
-                "title": "Breakfast Menu",
+                "title": "Breakfast",
                 "items": [
                     {
                         "name": "Berkeley Full English",
@@ -96,7 +96,7 @@
         "image": "https://media.timeout.com/images/105034416/1372/772/image.jpg",
         "menus": [
             {
-                "title": "Express Menu",
+                "title": "Express",
                 "items": [
                     {
                         "name": "BASKET OF SOURDOUGH PARISIENNE BAGUETTE",
@@ -438,7 +438,7 @@
         "image": "https://media.timeout.com/images/103813580/1372/772/image.jpg",
         "menus": [
           {
-            "title": "Lunch Menu",
+            "title": "Lunch",
             "items": [
               {
                 "name": "Baguete",
@@ -455,7 +455,7 @@
               ]
           },
           {
-            "title": "Brunch Menu",
+            "title": "Brunch",
             "items": [
               {
                 "name": "Small Breakfast",
